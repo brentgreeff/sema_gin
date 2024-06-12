@@ -10,10 +10,7 @@ func TestGetAllArticles(t *testing.T) {
   }
 
   for i, v := range getAllArticles() {
-    if v.Content != articleList[i].Content ||
-      v.ID != articleList[i].ID ||
-      v.Title != articleList[i].Title {
-
+    if v.Content != articleList[i].Content || v.ID != articleList[i].ID || v.Title != articleList[i].Title {
       t.Fail()
       break
     }
